@@ -1,0 +1,27 @@
+inherit gnome2
+
+NAME="xplayer-plparser"
+VERSION=1.0.2
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Cross-desktop playlist parser library"
+DESCRIPTION="xplayer-pl-parser is a simple GObject-based library to parse a
+host of playlist formats, as well as save those"
+HOMEPAGE="https://www.linuxmint.com/"
+SRC_URI="https://github.com/linuxmint/${NAME}/archive/${VERSION}/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="1.0.2-export-symbols.patch"
+
+PKG_NAMES="libxplayer-plparser18 libxplayer-plparser-common
+           libxplayer-plparser-devel libxplayer-plparser-doc
+           girepository-XplayerPlParser1.0"
+libxplayer_plparser18_REQUIRES="libxplayer-plparser-common"
+libxplayer_plparser18_CONTENTS="usr/bin/*-18.dll usr/libexec/${NAME}-${VERSION}"
+libxplayer_plparser_common_CONTENTS="usr/share/doc/ usr/share/locale/"
+libxplayer_plparser_devel_CONTENTS="--exclude=gir* usr/include/ usr/lib/"
+libxplayer_plparser_doc_CATEGORY="Doc"
+libxplayer_plparser_doc_CONTENTS="usr/share/gtk-doc/"
+girepository_XplayerPlParser1_0_CONTENTS="usr/*/gir*/XplayerPlParser-1.0.*"
+
+DIFF_EXCLUDES="*.pc *-features.h"
+
+CYGCONF_ARGS="--libexecdir=/usr/libexec/${NAME}-${VERSION}"

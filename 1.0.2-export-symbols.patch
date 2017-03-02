@@ -1,0 +1,18 @@
+--- origsrc/xplayer-plparser-1.0.2/plparse/plparser.symbols	2016-04-27 09:24:56.000000000 -0500
++++ src/xplayer-plparser-1.0.2/plparse/plparser.symbols	2016-05-17 17:21:56.893413500 -0500
+@@ -4,7 +4,6 @@ xplayer_cd_detect_type_with_url
+ xplayer_cd_get_human_readable_name
+ xplayer_cd_has_medium
+ xplayer_cd_mrl_from_type
+-xplayer_disc_media_type_get_type
+ xplayer_disc_media_type_quark
+ xplayer_pl_parser_add_ignored_mimetype
+ xplayer_pl_parser_add_ignored_scheme
+@@ -14,7 +13,6 @@ xplayer_pl_parser_can_parse_from_uri
+ xplayer_pl_parser_error_get_type
+ xplayer_pl_parser_error_quark
+ xplayer_pl_parser_get_type
+-xplayerplparser_marshal_VOID__STRING_STRING_STRING
+ xplayer_pl_parser_new
+ xplayer_pl_parser_parse
+ xplayer_pl_parser_parse_async
